@@ -29,7 +29,7 @@ useEffect(() => {
     <div>
       <h2>{drinkDetails.strDrink}</h2>
       <img src={drinkDetails.strDrinkThumb}/>
-      <p>Ingredients: \n{drinkDetails.strIngredient1} \n{drinkDetails.strIngredient2} \n{drinkDetails.strIngredient3} \n{drinkDetails.strIngredient4} \n{drinkDetails.strIngredient5} \n{drinkDetails.strIngredient6} \n{drinkDetails.strIngredient7}</p>
+      <p>Ingredients: <br/>{drinkDetails.strIngredient1} <br/>{drinkDetails.strIngredient2} <br/>{drinkDetails.strIngredient3} <br/>{drinkDetails.strIngredient4} <br/>{drinkDetails.strIngredient5} <br/>{drinkDetails.strIngredient6} <br/>{drinkDetails.strIngredient7}</p>
       <p>Glass: {drinkDetails.strGlass}</p>
       <p>Instructions: {drinkDetails.strInstructions}</p>
       <Link to="/nonAlc">Return to Non-Alcoholic Drink List</Link>
