@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-
+let input = document.querySelector('input').value
 
 const Nav = () => {
     return (
@@ -11,4 +11,7 @@ const Nav = () => {
     )
 }
 
-export default Nav
+export default {
+    Nav,
+    input
+}
