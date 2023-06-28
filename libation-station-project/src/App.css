@@ -2,6 +2,7 @@ body{
   margin:0;
   padding:0;
   background-color: #832727;
+  color:#CACACA;
 }
 
 #root {
@@ -61,4 +62,12 @@ input{
 
 .details{
   margin-top:200px;
+}
+
+.list-item{
+  margin-top:250px;
+}
+
+.list-item-img{
+  width:450px;
 }

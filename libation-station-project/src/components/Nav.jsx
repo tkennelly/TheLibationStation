@@ -1,19 +1,12 @@
-
 import { useState } from 'react'
-import { Routes,Route } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import DrinkList from './Lists/DrinkList'
 
-const Nav = () => {
-    
-    const [formState, setFormState] = useState('')
-    const handleChange = event => {
-        setFormState({ ...formState, [event.target.id]: event.target.value })
-    }
-
-    const handleSubmit = event => {
+const Nav = ({ formState,handleChange }) => {
+    let navigate = useNavigate()
+    const handleSubmit = (event) =>{
         event.preventDefault()
-        
+        navigate('/drinks')
     }
     return (
         <div className='nav'>
@@ -25,9 +18,6 @@ const Nav = () => {
             <Link className='link' to='/drinks'>All Drinks</Link>
             <Link className='link' to='/alc'>Alcoholic Drinks</Link>
             <Link className='link' to='/nonAlc'>NonAlcoholic Drinks</Link>
-            <Routes>
-                <Route path='/drinks' element={<DrinkList handleChange={handleChange} handleSubmit={handleSubmit} formState={formState}/>}/>
-            </Routes>
 
         </div>
     )

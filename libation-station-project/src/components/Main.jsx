@@ -8,7 +8,7 @@ import AlcList from './Lists/AlcList'
 import NonAlcPage from './Pages/NonAlcPage'
 import AlcDetails from './Pages/AlcPage'
 
-const Main = () => {
+const Main = ({ formState }) => {
 
     const [drinks, setDrinks] = useState([])
 
@@ -16,12 +16,12 @@ const Main = () => {
         <div>
             <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/drinks' element={<DrinkList drinks={drinks} setDrinks={setDrinks} />} />
+            <Route path='/drinks' element={<DrinkList drinks={drinks} setDrinks={setDrinks} value={formState.search}/>} />
             <Route path='/drinks/:strDrink' element={<DrinkPage drinks={drinks} />} />
             <Route path='/nonAlc' element={<NonAlcList/>}/>
             <Route path='/alc' element={<AlcList />} />
             <Route path='/nonAlc/:drinks' element={<NonAlcPage/>}/>
-            <Route path='/alc/:id' element={<AlcDetails/>}/>
+            <Route path='/alc/:name' element={<AlcDetails/>}/>
             </Routes>
         </div>
     )
