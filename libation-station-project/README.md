@@ -1,4 +1,6 @@
-## SEIR 0508
+## The Libation Station
+
+Check out our ERD = https://lucid.app/lucidchart/ad9c3abe-11f8-4aa4-8e48-89b0724fe070/edit?beaconFlowId=FCD1E7119D5D7DA0&invitationId=inv_698874cc-11ba-4aa2-819c-424368e43e5b&page=0_0#
 
 # FoodE, the Foodie's Best Friend
 
