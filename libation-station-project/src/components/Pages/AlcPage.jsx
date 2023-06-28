@@ -8,12 +8,13 @@ const AlcDetails = () => {
     
     const [alc, setAlc] = useState()
     
-    let {id} = useParams()
+    let {name} = useParams()
 
     useEffect(()=>{
     const getAlc = async() => {
-        const response = await axios.get(`${BASE_URL}/filter.php?i=`)
-        setAlc(response.data.drinks[id])
+        const response = await axios.get(`${BASE_URL}/filter.php?i=${name}`)
+        console.log(response.data.drinks)
+        setAlc(response.data.drinks)
     }
     getAlc()
     },[])
@@ -21,9 +22,13 @@ const AlcDetails = () => {
     console.log(alc)
     return alc ? (
     <div className="alc-detail">
-        <h2>Drink: {alc.strDrink[id]}</h2>
-
-        <Link to="/alcohols"> Return to ingredient list</Link>
+        <h2>List of Drinks:</h2>
+        {
+        alc.map((drink) => (
+            <h2>Drink: {drink.strDrink}</h2>
+        ))
+      }
+        <Link to="/alc"> Return to ingredient list</Link>
     </div>
     ) : <h3>Finding drinks...</h3>
 }
