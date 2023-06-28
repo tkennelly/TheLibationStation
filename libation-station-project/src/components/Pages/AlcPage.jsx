@@ -18,10 +18,10 @@ const AlcDetails = () => {
     getAlc()
     },[])
 
-
+    console.log(alc)
     return alc ? (
     <div className="alc-detail">
-        <h2>Drink: {alc.strDrink}</h2>
+        <h2>Drink: {alc.strDrink[id]}</h2>
 
         <Link to="/alcohols"> Return to ingredient list</Link>
     </div>

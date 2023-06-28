@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 const AlcList = () => {
 
-    const [alcs, setAlcs] = useState()
+    const [alcs, setAlcs] = useState([])
 
     useEffect(()=>{
         const getAlcs = async() => {
@@ -28,12 +28,12 @@ const AlcList = () => {
           {
             alcs.map((alc, key) => (
               <div key={key} onClick={()=>showAlc(key)} className="alc-name">
-                <h3>{alc.strIngredient}</h3>
+                <h3>{alc.strIngredient1}</h3>
               </div>
             ))
           }
         </div>
-      ) : <h3> Finding all alcohols... </h3>
+      ) : <h3> Finding all Ingredients... </h3>
       }
 
 export default AlcList
