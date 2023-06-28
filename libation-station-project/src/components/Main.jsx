@@ -13,7 +13,7 @@ const Main = ({ formState }) => {
     const [drinks, setDrinks] = useState([])
 
     return (
-        <div>
+        <div className='container'>
             <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/drinks' element={<DrinkList drinks={drinks} setDrinks={setDrinks} value={formState.search}/>} />

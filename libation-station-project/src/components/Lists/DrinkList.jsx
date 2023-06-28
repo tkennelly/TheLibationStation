@@ -10,16 +10,16 @@ export default function DrinkList({ drinks,setDrinks,value }){
     }
     useEffect(()=>{
         const getAllDrinks = async() => {
-            let response = await axios.get(`${BASE_URL}/search.php?f=a&f=b&f=c&f=d&f=e&f=f&f=g&f=h&f=i&f=j&f=k&f=l&f=m&f=n&f=o&f=p&f=q&f=r`)
+            let response = await axios.get(`http://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
             setDrinks(response.data.drinks)
             console.log(response.data.drinks)
         }
         getAllDrinks()
-    },[])
+    },[value])
     
-    return (drinks.map(drink=>{
+    return drinks ? (drinks.map(drink=>{
         console.log(value, drink.strDrink)
-        if (value === drink.strDrink || value === drink.strIngredient1){
+        // if (value === drink.strDrink || value === drink.strIngredient1){
             return (<div key={drink.strDrink} className='list-item' onClick={()=>(showDrink(drink))}>
             <h2>{drink.strDrink}</h2>
             <img className='list-item-img' src={drink.strDrinkThumb} alt="image of drink" />
@@ -35,6 +35,9 @@ export default function DrinkList({ drinks,setDrinks,value }){
             <p>{drink.strInstructions}</p>
             </div>)
         }
-    }))
+    // }
+    )
+    )
+     : <div>This is loading...</div>
 
 }
