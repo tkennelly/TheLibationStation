@@ -1,14 +1,12 @@
 import { Route, Routes } from 'react-router-dom'
+import { useState } from 'react'
 import Home from './Home'
-import NonAlcList from './Lists/NonAlcList'
 
 const Main = () => {
+    const [drinks, setDrinks] = useState([])
     return (
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/nonAlc' element={<NonAlcList/>}/>
-            
-        
         </Routes>
     )
 }

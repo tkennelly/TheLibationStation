@@ -1,8 +1,13 @@
+body{
+  margin:0;
+  padding:0;
+  background-color: #832727;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin:0 auto;
   text-align: center;
+  padding: 0;
 }
 
 .home {
@@ -11,7 +16,6 @@
 
 .landing-image {
   height: 50vh;
-
 }
 
 .welcome {
@@ -20,9 +24,37 @@
   border-radius: 5px;
   
 }
-
-
-.card {
-  padding: 2em;
+.header{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #4F4B4B;
+  background-color: #CACACA;
+  width:100vw;
+  padding:10px 40px;
+  box-sizing: border-box;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left:0;
 }
 
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input{
+  height:40px;
+  width:300px;
+  border-radius: 2%;
+}
+
+.link{
+  margin-left:30px;
+}
+
+.allDrinks{
+  margin-top:200px;
+}
