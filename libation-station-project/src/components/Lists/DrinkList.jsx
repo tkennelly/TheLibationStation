@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../../globals'
 import axios from 'axios'
 
-export default function DrinkList({ drinks,setDrinks,formState }){
+export default function DrinkList({ drinks,setDrinks,formState,handleSubmit }){
     let navigate = useNavigate()
     const showDrink = (drink) => {
         navigate(drink.strDrink)
@@ -16,14 +16,18 @@ export default function DrinkList({ drinks,setDrinks,formState }){
         }
         getAllDrinks()
     },[])
-   
-    drinks.map(drink=>{
-        if (formState === drink.strDrink || formState === drink.strIngredient1){
-            return (<div key={drink.strDrink} className='list-item' onClick={()=>(showDrink(drink))}>
-            <h2>{drink.strDrink}</h2>
-            <img className='list-item-img' src={drink.strDrinkThumb} alt="image of drink" />
-            </div>)
-        }
-    })
-
+    
+    handleSubmit = (event) => {
+        event.preventDefault()
+        drinks.map(drink=>{
+            if (formState === drink.strDrink || formState === drink.strIngredient1){
+                return (<div key={drink.strDrink} className='list-item' onClick={()=>(showDrink(drink))}>
+                <h2>{drink.strDrink}</h2>
+                <img className='list-item-img' src={drink.strDrinkThumb} alt="image of drink" />
+                </div>)
+            } else {
+                return(<h1>No drink found with that name...</h1>)
+            }
+        })
+    }
 }
