@@ -3,7 +3,7 @@ import Home from './Home'
 import NonAlcList from './Lists/NonAlcList'
 import AlcList from './Lists/AlcList'
 import NonAlcPage from './Pages/NonAlcPage'
-import AlcDetails from './Page/AlcPage'
+import AlcDetails from './Pages/AlcPage'
 
 const Main = () => {
     return (

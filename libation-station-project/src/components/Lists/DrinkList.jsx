@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../../globals'
 import axios from 'axios'
-import input from '../Nav'
+import Nav,{ input } from '../Nav'
 
 export default function DrinkList({ drinks,setDrinks }){
     let navigate = useNavigate()
@@ -19,13 +19,16 @@ export default function DrinkList({ drinks,setDrinks }){
     },[])
     return (
         <div className='allDrinks'>
-            {drinks.map(drink=>(
+            {submit.addEventListener('click', ()=>(
+                drinks.map(drink=>(
                 (input === drink.strDrink || input === drink.strIngredient1) ?
                 <div key={drink.strDrink} className='list-item' onClick={()=>(showDrink(drink))}>
-                    <h2>{drink.strDrink}</h2>
-                    <img className='list-item-img' src={drink.strDrinkThumb} alt="image of drink" />
+                <h2>{drink.strDrink}</h2>
+                <img className='list-item-img' src={drink.strDrinkThumb} alt="image of drink" />
                 </div> : <h2></h2>
-            ))}
+                ))
+            ))
+            }
         </div>
     )
 }
