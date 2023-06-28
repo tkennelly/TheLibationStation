@@ -18,8 +18,8 @@ const AlcList = () => {
 
       let navigate = useNavigate()
 
-      const showAlc = (key) => {
-        navigate(`${key}`)
+      const showAlc = (name) => {
+        navigate(`${name}`)
       }
       
       return alcs ?(
@@ -27,7 +27,7 @@ const AlcList = () => {
           <h2>List of Ingredients</h2>
           {
             alcs.map((alc, key) => (
-              <div key={key} onClick={()=>showAlc(key)} className="alc-name">
+              <div key={key} onClick={()=>showAlc(alc.strIngredient1)} className="alc-name">
                 <h3>{alc.strIngredient1}</h3>
               </div>
             ))
