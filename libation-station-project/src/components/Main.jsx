@@ -28,8 +28,8 @@ const Main = () => {
             <Route path='/' element={<Home />} />
             <Route path='/nonAlc' element={<NonAlcList/>}/>
             <Route path='/alc' element={<AlcList />} />
-            <Route path='/nonAlc:drinks' element={<NonAlcPage/>}/>
-            <Route path='/alc:id' element={<AlcDetails/>}/>
+            <Route path='/nonAlc/:drinks' element={<NonAlcPage/>}/>
+            <Route path='/alc/:id' element={<AlcDetails/>}/>
             </Routes>
         </div>
     )
