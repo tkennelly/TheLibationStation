@@ -1,9 +1,8 @@
 const Home = () => {
     return (
         <div className="home">
-        <h3>This is a Landing Page</h3>
         
-        <img src="/src/assets/Oldfashioned.jpeg" alt="" className="landing-image"/>
+        <img src=".../assets/Oldfashioned.jpeg" alt="" className="landing-image"/>
         
         <p className="welcome">Welcome to The Libation Station! 
         <br/><br/>
