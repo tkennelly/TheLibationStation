@@ -21,3 +21,19 @@
 .read-the-docs {
   color: #888;
 }
+
+.list-item-img{
+  width:340px;
+}
+
+.details-item-img{
+  width:450px;
+}
+
+.alcoholic-designation{
+  color:orange;
+}
+
+.recipe-list{
+  list-style: none;
+}
