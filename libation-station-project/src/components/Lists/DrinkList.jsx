@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../../globals'
 import axios from 'axios'
-import Nav,{ input } from '../Nav'
 
-export default function DrinkList({ drinks,setDrinks }){
+export default function DrinkList({ drinks,setDrinks,formState }){
     let navigate = useNavigate()
     const showDrink = (drink) => {
         navigate(drink.strDrink)
@@ -17,18 +16,14 @@ export default function DrinkList({ drinks,setDrinks }){
         }
         getAllDrinks()
     },[])
-    return (
-        <div className='allDrinks'>
-            {submit.addEventListener('click', ()=>(
-                drinks.map(drink=>(
-                (input === drink.strDrink || input === drink.strIngredient1) ?
-                <div key={drink.strDrink} className='list-item' onClick={()=>(showDrink(drink))}>
-                <h2>{drink.strDrink}</h2>
-                <img className='list-item-img' src={drink.strDrinkThumb} alt="image of drink" />
-                </div> : <h2></h2>
-                ))
-            ))
-            }
-        </div>
-    )
+   
+    drinks.map(drink=>{
+        if (formState === drink.strDrink || formState === drink.strIngredient1){
+            return (<div key={drink.strDrink} className='list-item' onClick={()=>(showDrink(drink))}>
+            <h2>{drink.strDrink}</h2>
+            <img className='list-item-img' src={drink.strDrinkThumb} alt="image of drink" />
+            </div>)
+        }
+    })
+
 }
