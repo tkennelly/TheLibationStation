@@ -2,6 +2,7 @@ body{
   margin:0;
   padding:0;
   background-color: #832727;
+  color:#CACACA;
 }
 
 #root {
@@ -24,6 +25,13 @@ body{
   border-radius: 5px;
   
 }
+
+.container{
+  margin-top:250px;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+}
 .header{
   display:flex;
   align-items: center;
@@ -39,16 +47,30 @@ body{
   left:0;
 }
 
+.logo{
+  font-size:2rem;
+  font-weight:500;
+}
+
 .nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+form{
+  display: flex;
+  margin-left:40px;
+}
+
 input{
   height:40px;
   width:300px;
   border-radius: 2%;
+}
+
+.submit-button{
+  margin-left:20px;
 }
 
 .link{
@@ -61,4 +83,12 @@ input{
 
 .details{
   margin-top:200px;
+}
+
+.list-item{
+  border:3px solid #CACACA;
+}
+
+.list-item-img{
+  width:450px;
 }
