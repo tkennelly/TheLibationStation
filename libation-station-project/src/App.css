@@ -5,35 +5,23 @@
   text-align: center;
 }
 
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.home {
+  display: flex;
 }
+
+.landing-image {
+  height: 50vh;
+
+}
+
+.welcome {
+  background-color: #4f4b4b;
+  border: white solid 1px;
+  border-radius: 5px;
+  
+}
+
 
 .card {
   padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.list-item-img{
-  width:340px;
-}
-
-.details-item-img{
-  width:450px;
-}
-
-.alcoholic-designation{
-  color:orange;
-}
-
-.recipe-list{
-  list-style: none;
 }
