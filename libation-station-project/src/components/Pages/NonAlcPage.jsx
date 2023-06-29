@@ -26,8 +26,8 @@ useEffect(() => {
   }
 
   return (
-    <div>
-      <h2>{drinkDetails.strDrink}</h2>
+    <div className='details'>
+      <h1>{drinkDetails.strDrink}</h1>
       <img src={drinkDetails.strDrinkThumb}/>
       <p>Ingredients: \n{drinkDetails.strIngredient1} \n{drinkDetails.strIngredient2} \n{drinkDetails.strIngredient3} \n{drinkDetails.strIngredient4} \n{drinkDetails.strIngredient5} \n{drinkDetails.strIngredient6} \n{drinkDetails.strIngredient7}</p>
       <p>Glass: {drinkDetails.strGlass}</p>

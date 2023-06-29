@@ -23,7 +23,7 @@ const AlcList = () => {
       }
       
       return alcs ?(
-        <div className="alc">
+        <div className="alc-list">
           <h2>List of Ingredients</h2>
           {
             alcs.map((alc, key) => (
