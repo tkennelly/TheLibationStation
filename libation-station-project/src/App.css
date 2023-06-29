@@ -62,3 +62,8 @@ input{
 .details{
   margin-top:200px;
 }
+
+img {
+  height: 55vh;
+  border: solid white 2px;
+}
