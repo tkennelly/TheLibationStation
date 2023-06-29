@@ -10,7 +10,7 @@ export default function DrinkList({ drinks,setDrinks,value }){
     }
     useEffect(()=>{
         const getAllDrinks = async() => {
-            let response = await axios.get(`http://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
+            let response = await axios.get(`${BASE_URL}/search.php?s=${value}`)
             setDrinks(response.data.drinks)
             console.log(response.data.drinks)
         }
