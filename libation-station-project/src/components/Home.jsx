@@ -1,10 +1,8 @@
 const Home = () => {
     return (
         <div className="home">
-        
-        <img src=".../assets/Oldfashioned.jpeg" alt="" className="landing-image"/>
-        
-        <p className="welcome">Welcome to The Libation Station! 
+        <img src="../images/Oldfashioned.jpeg" alt="" className="landing-image"/>
+        <p className="welcome"><h2>Welcome to The Libation Station! </h2>
         <br/><br/>
         Here at The Libation Station, we are passionate about mixology and everything related to the art of crafting delightful libations.
         <br/><br/>

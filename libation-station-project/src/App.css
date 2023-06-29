@@ -1,37 +1,41 @@
 body{
   margin:0;
   padding:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #832727;
   color:#CACACA;
+  text-align: center;
 }
 
 #root {
-  margin:0 auto;
-  text-align: center;
+  
   padding: 0;
 }
 
 .home {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 .landing-image {
-  height: 50vh;
+  height: 40%;
+  margin-left: 90px;
 }
 
 .welcome {
+  display: flex;
+  flex-direction: column;
   background-color: #4f4b4b;
   border: white solid 1px;
-  border-radius: 5px;
-  
+  height:36%;
+  margin: 0 80px 0 0;
+  padding:20px;
 }
 
-.container{
-  margin-top:250px;
-  display: grid;
-  grid-template-columns: 40% 40%;
-  justify-content: center;
-}
 .header{
   display:flex;
   align-items: center;
@@ -47,9 +51,22 @@ body{
   left:0;
 }
 
+.logo-set{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .logo{
-  font-size:2rem;
+  font-size:1.7rem;
   font-weight:500;
+  margin-left:10px;
+  padding:0;
+}
+
+.logo-img{
+  width:80px;
+  margin: 0;
 }
 
 .nav{
@@ -77,18 +94,48 @@ input{
   margin-left:30px;
 }
 
+.container{
+  margin-top:250px;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+}
+
 .allDrinks{
   margin-top:200px;
 }
 
+.alc-list{
+  margin: 200px 0 0 0;
+  width:100%;
+}
+
+.alc-name{
+  cursor: pointer;
+}
+
+.alc-drinks-list{
+  margin-top: 0;
+}
+
 .details{
-  margin-top:200px;
+  margin:200px 50px 0 50px;
+  border:3px solid white;
+  padding: 20px;
+  text-align: center;
 }
 
 .list-item{
   border:3px solid #CACACA;
+  cursor: pointer;
+  margin:0 ;
 }
 
 .list-item-img{
   width:450px;
+}
+
+.nonAlc{
+  margin-top:250px;
+  width:500px;
 }

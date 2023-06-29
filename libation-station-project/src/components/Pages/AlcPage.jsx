@@ -21,7 +21,7 @@ const AlcDetails = () => {
 
     console.log(alc)
     return alc ? (
-    <div className="alc-detail">
+    <div className="details alc-drinks-list">
         <h2>List of Drinks:</h2>
         {
         alc.map((drink) => (

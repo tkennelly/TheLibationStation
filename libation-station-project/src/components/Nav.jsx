@@ -11,10 +11,10 @@ const Nav = ({ formState,handleChange }) => {
     return (
         <div className='nav'>
             <Link className='link' to="/">Home</Link>
-            <Link className='link' to='/alc'>Alcoholic Drinks</Link>
+            <Link className='link' to='/alc'>Ingredients</Link>
             <Link className='link' to='/nonAlc'>Non-Alcoholic Drinks</Link>
             <form onSubmit={handleSubmit}>
-                <input type="text" id='search' onChange={handleChange} value={formState.search} placeholder='Search for your favorite cock'/>
+                <input type="text" id='search' onChange={handleChange} value={formState.search} placeholder='Search for your favorite cocktail'/>
                 <button type='submit' className='submit-button'>Submit</button>
             </form>
         </div>

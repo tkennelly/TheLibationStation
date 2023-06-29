@@ -16,7 +16,7 @@ export default function DrinkList({ drinks,setDrinks,value }){
         }
         getAllDrinks()
     },[value])
-    
+
     return drinks ? (drinks.map(drink=>{
         console.log(value, drink.strDrink)
         // if (value === drink.strDrink || value === drink.strIngredient1){

@@ -23,10 +23,10 @@ const NonAlcList = () => {
 
     return (
       <div className="nonAlc">
-        <h2>List of Non-Alcoholic Drinks</h2>
         {nonAlc.map((nonAlc, i) => (
-          <div key={i} onClick={() => showNonAlcDrink(nonAlc)} className="card">
-            <h3>{nonAlc.strDrink}</h3>
+          <div key={i} onClick={() => showNonAlcDrink(nonAlc)} className="list-item">
+            <h2>{nonAlc.strDrink}</h2>
+            <img src={nonAlc.strDrinkThumb} alt="img" className='list-item-img'/>
           </div>
         ))}
       </div>
